@@ -10,9 +10,18 @@ package com.simplilearn.fsd._11_interface;
  */
 interface Income{
 	
-	double calculatePay(double salary, double taxes);
+	public static final int NUM = 4;
 	
+	double calculatePay(double salary, double taxes);
+	public abstract void doSomething2();
+	
+	static void newFeature() {
+		System.out.println("This is a new feature");
+	}
+	
+	//As of Java 8 -> default and static methods in interfaces
 }
+
 
 /*
  * The class is the template for creating objects.
@@ -29,12 +38,24 @@ class Employee implements Income{
 	void doSomething() {
 		System.out.println("Doing Something");
 	}
-}
+	
+	@Override
+	public void doSomething2() {
+		System.out.println("Doing Something2");
+	}
+	
+	//@Override
+	public void newFeature() {
+		System.out.println("This is a new feature Employee");
+	}
+
+	}
 
 public class InterfaceExample2 {
 
 	public static void main(String[] args) {
 
+		//We achieve abstraction by using Interfaces
 		Income emp = new Employee();
 		
 		double pay = emp.calculatePay(1000,200);
@@ -42,6 +63,7 @@ public class InterfaceExample2 {
 		
 		System.out.println(pay);
 		
+		System.out.println(Income.NUM);
 		
 	}
 
