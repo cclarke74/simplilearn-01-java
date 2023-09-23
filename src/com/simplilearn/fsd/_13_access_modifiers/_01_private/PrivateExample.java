@@ -60,9 +60,9 @@ public class PrivateExample {
 		
 		//obj.printClass();
 		
-		MyChild obj = new MyChild();
+		//MyChild obj = new MyChild();
 		
-		obj.doSomething();
+		//obj.doSomething();
 	}
 
 }
