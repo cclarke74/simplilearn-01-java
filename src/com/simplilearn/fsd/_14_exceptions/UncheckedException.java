@@ -1,7 +1,6 @@
 package com.simplilearn.fsd._14_exceptions;
 
 import java.util.InputMismatchException;
-
 import java.util.Scanner;
 
 public class UncheckedException {
